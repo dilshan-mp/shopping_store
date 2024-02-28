@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_store/screen/forget_screen.dart';
 import 'package:shopping_store/screen/home_screen.dart';
 import 'package:shopping_store/screen/login_screen.dart';
 
@@ -54,26 +55,10 @@ class SignUpScreen extends StatelessWidget {
                         suffixIcon: Icon(Icons.remove_red_eye)
                       )
                     ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: TextButton(
-                          onPressed: (){},
-                          child: const Text(
-                            "Forgot Password",
-                             style: TextStyle(
-                              color: Color(0xFFEf6969),
-                              fontSize: 15
-                              )
-                            ) 
-                          )
-                        ),
                     const SizedBox(height: 50,),
                      ElevatedButton(
                          onPressed: (){
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context)=>const LoginScreen()));
+                           ;
                            },
                      style: ElevatedButton.styleFrom(
                               minimumSize: const Size.fromHeight(55),
