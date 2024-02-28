@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopping_store/screen/OTPScreen.dart';
 import 'package:shopping_store/screen/login_screen.dart';
+import 'package:shopping_store/screen/recovery_screen.dart';
 
 class ForgotScreen extends StatefulWidget {
   const ForgotScreen({super.key});
@@ -26,7 +28,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 10,),
               const Text(
@@ -68,13 +70,13 @@ class _ForgotScreenState extends State<ForgotScreen> {
                     )
                      ))
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                  ElevatedButton(
                          onPressed: (){
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context)=>const LoginScreen()));
+                                builder: (context)=>const RecoveryScreen()));
                            },
                      style: ElevatedButton.styleFrom(
                               minimumSize: const Size.fromHeight(55),
@@ -85,7 +87,26 @@ class _ForgotScreenState extends State<ForgotScreen> {
             ),
             child: const Text("Send code",style: TextStyle(color: Colors.white,fontSize: 18),),
             ),
-            ],),
+            const SizedBox(height: 30,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text("OR"),
+              TextButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>const OTPScreen()));
+              }, child: const Text(
+              "Verify Using Number",
+              style: TextStyle(
+                color: Color(0xFFDB3022),
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+              ),
+            )
+            )
+              ],
+            ),
+            ],
+          ),
         ),
       ),
     );
