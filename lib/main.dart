@@ -1,6 +1,7 @@
  import 'package:flutter/material.dart';
 import 'package:shopping_store/screen/Signup_screen.dart';
 import 'package:shopping_store/screen/login_screen.dart';
+import 'package:shopping_store/screen/navigation_screen.dart';
 import 'package:shopping_store/screen/onboarding_screen.dart';
 import 'package:shopping_store/screen/splash_screen.dart';
 
@@ -19,7 +20,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor:const Color(0xFFEF6969),
       ),
-      home:LoginScreen(),
+      home:NavigationScreen(),
       
     );
   }

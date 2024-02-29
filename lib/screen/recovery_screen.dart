@@ -26,7 +26,7 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
             children: [
               const SizedBox(height: 10,),
               const Text(
-                "Forgot password",
+                "Reset password",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold
